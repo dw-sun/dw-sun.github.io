@@ -3,29 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sunduowei.gitlab.io/manual/posts/my-first-post/</loc>
+    <loc>https://sunduowei.github.io/posts/my-first-post/</loc>
     <lastmod>2019-01-31T11:59:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sunduowei.gitlab.io/manual/categories/</loc>
+    <loc>https://sunduowei.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sunduowei.gitlab.io/manual/</loc>
-    <lastmod>2019-01-31T11:59:34+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sunduowei.gitlab.io/manual/posts/</loc>
+    <loc>https://sunduowei.github.io/</loc>
     <lastmod>2019-01-31T11:59:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sunduowei.gitlab.io/manual/tags/</loc>
+    <loc>https://sunduowei.github.io/posts/</loc>
+    <lastmod>2019-01-31T11:59:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunduowei.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
