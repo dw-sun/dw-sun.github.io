@@ -3,44 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sunduowei.github.io/posts/fouth/</loc>
-    <lastmod>2019-01-31T10:32:49+08:00</lastmod>
+    <loc>https://sunduowei.gitlab.io/manual/posts/my-first-post/</loc>
+    <lastmod>2019-01-31T11:59:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sunduowei.github.io/posts/third/</loc>
-    <lastmod>2019-01-31T09:32:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sunduowei.github.io/posts/second/</loc>
-    <lastmod>2019-01-31T08:32:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sunduowei.github.io/posts/first/</loc>
-    <lastmod>2019-01-31T08:27:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sunduowei.github.io/categories/</loc>
+    <loc>https://sunduowei.gitlab.io/manual/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sunduowei.github.io/posts/</loc>
-    <lastmod>2019-01-31T10:32:49+08:00</lastmod>
+    <loc>https://sunduowei.gitlab.io/manual/</loc>
+    <lastmod>2019-01-31T11:59:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sunduowei.github.io/tags/</loc>
+    <loc>https://sunduowei.gitlab.io/manual/posts/</loc>
+    <lastmod>2019-01-31T11:59:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://sunduowei.github.io/</loc>
-    <lastmod>2019-01-31T10:32:49+08:00</lastmod>
+    <loc>https://sunduowei.gitlab.io/manual/tags/</loc>
     <priority>0</priority>
   </url>
   
