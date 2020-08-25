@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on DuoWei Sun</title>
-    <link>https://sunduowei.github.io/posts/</link>
-    <description>Recent content in Blog on DuoWei Sun</description>
+    <title>Blog on DW Sun</title>
+    <link>https://dw-sun.github.io/posts/</link>
+    <description>Recent content in Blog on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Aug 2019 21:11:53 +0800</lastBuildDate>
     
-	<atom:link href="https://sunduowei.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dw-sun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Performance issue fixing for an AIX c program application </title>
-      <link>https://sunduowei.github.io/posts/20190808/</link>
+      <link>https://dw-sun.github.io/posts/20190808/</link>
       <pubDate>Thu, 08 Aug 2019 21:11:53 +0800</pubDate>
       
-      <guid>https://sunduowei.github.io/posts/20190808/</guid>
+      <guid>https://dw-sun.github.io/posts/20190808/</guid>
       <description> It is a pleasure things i solved a real technical problem for a customer.
 Return to technical What is the problem The hard path to find the root issues out Fix it </description>
     </item>
