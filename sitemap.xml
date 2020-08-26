@@ -1,36 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dw-sun.github.io/about/</loc>
+    <lastmod>2020-08-25T20:47:56+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dw-sun.github.io/posts/</loc>
-    <lastmod>2020-08-25T21:56:57+08:00</lastmod>
+    <lastmod>2019-08-08T21:11:53+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dw-sun.github.io/</loc>
-    <lastmod>2020-08-25T21:56:57+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dw-sun.github.io/tags/</loc>
-    <lastmod>2020-08-25T21:56:57+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dw-sun.github.io/tags/d/</loc>
-    <lastmod>2020-08-25T21:56:57+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dw-sun.github.io/posts/20200825/</loc>
-    <lastmod>2020-08-25T21:56:57+08:00</lastmod>
+    <loc>https://dw-sun.github.io/tags/c/</loc>
+    <lastmod>2019-08-08T21:11:53+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -43,14 +31,23 @@
   </url>
   
   <url>
-    <loc>https://dw-sun.github.io/tags/c/</loc>
+    <loc>https://dw-sun.github.io/</loc>
     <lastmod>2019-08-08T21:11:53+08:00</lastmod>
-    <priority>0</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dw-sun.github.io/tags/</loc>
+    <lastmod>2019-08-08T21:11:53+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dw-sun.github.io/categories/</loc>
-    <priority>0</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c on DW Sun</title>
+    <title>c on DW Sun Site</title>
     <link>https://dw-sun.github.io/tags/c/</link>
-    <description>Recent content in c on DW Sun</description>
+    <description>Recent content in c on DW Sun Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Aug 2019 21:11:53 +0800</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 08 Aug 2019 21:11:53 +0800</pubDate>
       
       <guid>https://dw-sun.github.io/posts/20190808/</guid>
-      <description> It is a pleasure things i solved a real technical problem for a customer.
+      <description>It is a pleasure things i solved a real technical problem for a customer.
 Return to technical What is the problem The hard path to find the root issues out Fix it </description>
     </item>
     

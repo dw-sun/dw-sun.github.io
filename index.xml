@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading, Thinking, Experiencing, and Making on DW Sun</title>
+    <title>Reading, Thinking, Experiencing, Making on DW Sun Site</title>
     <link>https://dw-sun.github.io/</link>
-    <description>Recent content in Reading, Thinking, Experiencing, and Making on DW Sun</description>
+    <description>Recent content in Reading, Thinking, Experiencing, Making on DW Sun Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2020 21:56:57 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Aug 2019 21:11:53 +0800</lastBuildDate>
     
 	<atom:link href="https://dw-sun.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>test again</title>
-      <link>https://dw-sun.github.io/posts/20200825/</link>
-      <pubDate>Tue, 25 Aug 2020 21:56:57 +0800</pubDate>
+      <title>About</title>
+      <link>https://dw-sun.github.io/about/</link>
+      <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
       
-      <guid>https://dw-sun.github.io/posts/20200825/</guid>
-      <description> This is a new page which is using new project structure to post
-Title1 Title 2 </description>
+      <guid>https://dw-sun.github.io/about/</guid>
+      <description>This is DW Sun website</description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@ Title1 Title 2 </description>
       <pubDate>Thu, 08 Aug 2019 21:11:53 +0800</pubDate>
       
       <guid>https://dw-sun.github.io/posts/20190808/</guid>
-      <description> It is a pleasure things i solved a real technical problem for a customer.
+      <description>It is a pleasure things i solved a real technical problem for a customer.
 Return to technical What is the problem The hard path to find the root issues out Fix it </description>
     </item>
     
