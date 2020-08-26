@@ -11,14 +11,26 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://dw-sun.github.io/about/</link>
+      <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
+      
+      <guid>https://dw-sun.github.io/about/</guid>
+      <description>I am living at BeiJing, China; I am looking for the job opportunity now, it could be full time, or part time.
+I am studying AI, Istio/Service Mesh/Micor Service, and some consulting skills.</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://dw-sun.github.io/contact/</link>
       <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
       
       <guid>https://dw-sun.github.io/contact/</guid>
-      <description>email: sunduowei@hotmail.com
-cell: +86 139 1127 1168
-website: https://dw-sun.github.io</description>
+      <description>The channels of communication: email: sunduowei@hotmail.com
+Zoom: https://zoom.com.cn/j/9546263564
+Tencent/Wechat meeting: https://meeting.tencent.com/p/6806646001
+Cell: +86 139 1127 1168
+Website: https://dw-sun.github.io</description>
     </item>
     
   </channel>
