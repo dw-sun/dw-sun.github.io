@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading, Thinking, Experiencing, Making on DW Sun Site</title>
+    <title>Reading, Thinking, Experiencing, Making on DW Sun</title>
     <link>https://dw-sun.github.io/</link>
-    <description>Recent content in Reading, Thinking, Experiencing, Making on DW Sun Site</description>
+    <description>Recent content in Reading, Thinking, Experiencing, Making on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Aug 2019 21:11:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 07:43:33 +0800</lastBuildDate>
     
 	<atom:link href="https://dw-sun.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
-      <link>https://dw-sun.github.io/about/</link>
+      <title>20200826</title>
+      <link>https://dw-sun.github.io/articles/20200826/</link>
+      <pubDate>Wed, 26 Aug 2020 07:43:33 +0800</pubDate>
+      
+      <guid>https://dw-sun.github.io/articles/20200826/</guid>
+      <description>The thrid post
+title tiele title </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://dw-sun.github.io/contact/</link>
       <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
       
-      <guid>https://dw-sun.github.io/about/</guid>
-      <description>This is DW Sun website</description>
+      <guid>https://dw-sun.github.io/contact/</guid>
+      <description>email: sunduowei@hotmail.com
+cell: +86 139 1127 1168
+website: https://dw-sun.github.io</description>
     </item>
     
     <item>
       <title>Performance issue fixing for an AIX c program application </title>
-      <link>https://dw-sun.github.io/posts/20190808/</link>
+      <link>https://dw-sun.github.io/blogs/20190808/</link>
       <pubDate>Thu, 08 Aug 2019 21:11:53 +0800</pubDate>
       
-      <guid>https://dw-sun.github.io/posts/20190808/</guid>
+      <guid>https://dw-sun.github.io/blogs/20190808/</guid>
       <description>It is a pleasure things i solved a real technical problem for a customer.
 Return to technical What is the problem The hard path to find the root issues out Fix it </description>
     </item>
