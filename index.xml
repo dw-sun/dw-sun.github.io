@@ -1,36 +1,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on DW Sun</title>
-    <link>http://192.168.5.1:1313/</link>
+    <link>https://dw-sun.github.io/</link>
     <description>Recent content in Home on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
     <lastBuildDate>Thu, 27 Aug 2020 12:07:52 +0800</lastBuildDate>
     
-        <atom:link href="http://192.168.5.1:1313/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://dw-sun.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Google Analytics</title>
-        <link>http://192.168.5.1:1313/posts/google_analytics/</link>
+        <link>https://dw-sun.github.io/posts/google_analytics/</link>
         <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
         
-        <guid>http://192.168.5.1:1313/posts/google_analytics/</guid>
-        <description>DW Sun http://192.168.5.1:1313/posts/google_analytics/ -&lt;p&gt;Google Analytics&lt;/p&gt;
-- http://192.168.5.1:1313/posts/google_analytics/ - DW Sun 2020</description>
+        <guid>https://dw-sun.github.io/posts/google_analytics/</guid>
+        <description>DW Sun https://dw-sun.github.io/posts/google_analytics/ -&lt;p&gt;Google Analytics&lt;/p&gt;
+- https://dw-sun.github.io/posts/google_analytics/ - DW Sun 2020</description>
         </item>
     
     
     
         <item>
         <title>Hugo and RobotsTxt</title>
-        <link>http://192.168.5.1:1313/posts/hugo_robots/</link>
+        <link>https://dw-sun.github.io/posts/hugo_robots/</link>
         <pubDate>Thu, 27 Aug 2020 10:24:44 +0800</pubDate>
         
-        <guid>http://192.168.5.1:1313/posts/hugo_robots/</guid>
-        <description>DW Sun http://192.168.5.1:1313/posts/hugo_robots/ -&lt;h3 id=&#34;how-hugo-support-robotstxt&#34;&gt;How Hugo support RobotsTxt&lt;/h3&gt;
+        <guid>https://dw-sun.github.io/posts/hugo_robots/</guid>
+        <description>DW Sun https://dw-sun.github.io/posts/hugo_robots/ -&lt;h3 id=&#34;how-hugo-support-robotstxt&#34;&gt;How Hugo support RobotsTxt&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Config config.toml&lt;/p&gt;
@@ -63,38 +63,38 @@ Disallow:
 Disallow: /
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
-- http://192.168.5.1:1313/posts/hugo_robots/ - DW Sun 2020</description>
+- https://dw-sun.github.io/posts/hugo_robots/ - DW Sun 2020</description>
         </item>
     
     
     
         <item>
         <title>About</title>
-        <link>http://192.168.5.1:1313/about/</link>
+        <link>https://dw-sun.github.io/about/</link>
         <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
         
-        <guid>http://192.168.5.1:1313/about/</guid>
-        <description>DW Sun http://192.168.5.1:1313/about/ -&lt;p&gt;I am living at BeiJing, China; I am looking for the job opportunity now, it could be full time, or part time.&lt;/p&gt;
+        <guid>https://dw-sun.github.io/about/</guid>
+        <description>DW Sun https://dw-sun.github.io/about/ -&lt;p&gt;I am living at BeiJing, China; I am looking for the job opportunity now, it could be full time, or part time.&lt;/p&gt;
 &lt;p&gt;I am studying AI, Istio/Service Mesh/Micor Service, and some consulting skills.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-- http://192.168.5.1:1313/about/ - DW Sun 2020</description>
+- https://dw-sun.github.io/about/ - DW Sun 2020</description>
         </item>
     
     
     
         <item>
         <title>Contact</title>
-        <link>http://192.168.5.1:1313/contact/</link>
+        <link>https://dw-sun.github.io/contact/</link>
         <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
         
-        <guid>http://192.168.5.1:1313/contact/</guid>
-        <description>DW Sun http://192.168.5.1:1313/contact/ -&lt;h2 id=&#34;the-communication-channels&#34;&gt;The communication channels:&lt;/h2&gt;
+        <guid>https://dw-sun.github.io/contact/</guid>
+        <description>DW Sun https://dw-sun.github.io/contact/ -&lt;h2 id=&#34;the-communication-channels&#34;&gt;The communication channels:&lt;/h2&gt;
 &lt;p&gt;email: &lt;a href=&#34;mailto:sunduowei@hotmail.com&#34;&gt;sunduowei@hotmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Zoom: &lt;a href=&#34;https://zoom.com.cn/j/9546263564&#34;&gt;https://zoom.com.cn/j/9546263564&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Tencent/Wechat meeting: &lt;a href=&#34;https://meeting.tencent.com/p/6806646001&#34;&gt;https://meeting.tencent.com/p/6806646001&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Cell: +86 139 1127 1168&lt;/p&gt;
 &lt;p&gt;Website: &lt;a href=&#34;https://dw-sun.github.io&#34;&gt;https://dw-sun.github.io&lt;/a&gt;&lt;/p&gt;
-- http://192.168.5.1:1313/contact/ - DW Sun 2020</description>
+- https://dw-sun.github.io/contact/ - DW Sun 2020</description>
         </item>
     
     
