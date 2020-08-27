@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technology on DW Sun</title>
-    <link>http://192.168.5.1:1313/categories/technology/</link>
-    <description>Recent content in Technology on DW Sun</description>
+    <title>happy on DW Sun</title>
+    <link>http://192.168.5.1:1313/moods/happy/</link>
+    <description>Recent content in happy on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
     <lastBuildDate>Thu, 27 Aug 2020 12:07:52 +0800</lastBuildDate>
     
-	<atom:link href="http://192.168.5.1:1313/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://192.168.5.1:1313/moods/happy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

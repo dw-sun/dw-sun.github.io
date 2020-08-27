@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html><head>
-	<meta name="generator" content="Hugo 0.74.3" />
-<title>Home</title>
+<title>Hugo and RobotsTxt</title>
 
 
-
-  
 
 
 <meta charset="utf-8">
@@ -13,7 +10,7 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="My HomePage Description">
+<meta name="description" content="This blog lists some configuration points to enable Hugo to support RobotsTxt">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -53,6 +50,10 @@
 
 
 
+
+  
+    <script src="http://192.168.5.1:1313//js/toc.js"></script>
+  
 
 
 
@@ -94,9 +95,11 @@
             
             
             
+                
             
             
-            <a class="a-block nav-link-item false" href="/posts">
+            
+            <a class="a-block nav-link-item active" href="/posts">
                 Blog
             </a>
             
@@ -149,8 +152,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         </a>
         
         
-        
-        
     </div>
 </div><div class="single-column-drawer-container" ref="drawer"
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
@@ -172,9 +173,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 
                 
+                    
                 
                 
-                <a class="a-block drawer-menu-item false" href="/posts">
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
                     Blog
                 </a>
                 
@@ -231,92 +234,128 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div>
             <div id="content">
 <div ref="streamContainer" class="stream-container">
-    <div class="post-list-container post-list-container-no-background">
-        
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
             
-        
             
-            <a href="http://192.168.5.1:1313/posts/google_analytics/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Google Analytics
-                            </div>
-                            <div class="post-item-summary">
-                                How to use Google Analytics
-                            </div>
-                            <div class="post-item-meta">
-    2020-08-27
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+            
 
-    
-    
-
-    
-    0 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Hugo and RobotsTxt
+                    
+                    <div class="post-subtitle">
+                        This blog lists some configuration points to enable Hugo to support RobotsTxt
+                    </div>
+                    
+                    <div class="post-meta">
                         
+                        <time itemprop="datePublished">
+                            2020-08-27 10:24
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/technology">Technology</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/hugo">hugo</a>
+                                &nbsp;
+                            
+                        
+                        
+                            <i class="material-icons" style="">schedule</i>
+                            
+
+                            
+                            
+
+                            
+                            21 s.
                         
                     </div>
                 </div>
+            </div>
             
-        
-            
-            <a href="http://192.168.5.1:1313/posts/hugo_robots/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Hugo and RobotsTxt
-                            </div>
-                            <div class="post-item-summary">
-                                This blog lists some configuration points to enable Hugo to support RobotsTxt
-                            </div>
-                            <div class="post-item-meta">
-    2020-08-27
-    &emsp;
-    
-    
-    <i class="material-icons" style="font-size:10px">schedule</i>
-    
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h3 id="how-hugo-support-robotstxt">How Hugo support RobotsTxt</h3>
+<ol>
+<li>
+<p>Config config.toml</p>
+<pre><code>enableRobotsTXT = true
+[params].env = &quot;production&quot;
+</code></pre></li>
+<li>
+<p>run hugo command to generate the web site</p>
+<ul>
+<li>a robots.txt will be generated in <em><strong>public</strong></em> directory</li>
+</ul>
+</li>
+<li>
+<p>robots.txt templates are existing in <em><strong>layouts/robots.txt</strong></em> file, or <em><strong>themes/ananke/layouts/robots.txt</strong></em> file</p>
+<ul>
+<li>the templates would affects the content of the generated  <em><strong>public/robots.txt</strong></em></li>
+</ul>
+</li>
+</ol>
+<h3 id="robotstxt-samples">RobotsTxt samples</h3>
+<ol>
+<li>
+<p>Which tells search engines that they are allowed to crawl everything:</p>
+<pre><code>User-agent: *
+Disallow:
+</code></pre></li>
+<li>
+<p>Which tells search engines that they are <strong>NOT</strong> allowed to crawl anything:</p>
+<pre><code>User-agent: *
+Disallow: /
+</code></pre></li>
+</ol>
 
-    
-    
-
-    
-    21 s
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-08-27</p>
+                    
                 </div>
+            </div>
             
-        
-        </a>
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="http://192.168.5.1:1313/posts/google_analytics/">
+			Next<br>Google Analytics
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			Previous<br>No older posts.
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+                <p style="opacity: 0.6" align="center">
+                    <small>Comments Disabled.</small>
+                </p>
+                
+            </div>
+        </div>
     </div>
 </div>
 
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>

@@ -1,50 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading, Thinking, Experiencing, Making on DW Sun</title>
-    <link>https://dw-sun.github.io/</link>
-    <description>Recent content in Reading, Thinking, Experiencing, Making on DW Sun</description>
+    <title>Home on DW Sun</title>
+    <link>http://192.168.5.1:1313/</link>
+    <description>Recent content in Home on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 10:24:44 +0800</lastBuildDate>
+    <copyright>DW Sun 2020</copyright>
+    <lastBuildDate>Thu, 27 Aug 2020 12:07:52 +0800</lastBuildDate>
     
-	<atom:link href="https://dw-sun.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://192.168.5.1:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Hugo and RobotsTxt</title>
-      <link>https://dw-sun.github.io/post/hugo_robots/</link>
-      <pubDate>Thu, 27 Aug 2020 10:24:44 +0800</pubDate>
-      
-      <guid>https://dw-sun.github.io/post/hugo_robots/</guid>
-      <description>How Hugo support RobotsTxt   Config config.toml
-enableRobotsTXT = true[params].env = &amp;quot;production&amp;quot;  run hugo command to generate the web site
- a robots.txt will be generated in public directory    robots.txt templates are existing in layouts/robots.txt file, or themes/ananke/layouts/robots.txt file
- the templates would affects the content of the generated public/robots.txt    RobotsTxt samples   Which tells search engines that they are allowed to crawl everything:</description>
-    </item>
     
-    <item>
-      <title>About</title>
-      <link>https://dw-sun.github.io/about/</link>
-      <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
-      
-      <guid>https://dw-sun.github.io/about/</guid>
-      <description>I am living at BeiJing, China; I am looking for the job opportunity now, it could be full time, or part time.
-I am studying AI, Istio/Service Mesh/Micor Service, and some consulting skills.</description>
-    </item>
+        <item>
+        <title>Google Analytics</title>
+        <link>http://192.168.5.1:1313/posts/google_analytics/</link>
+        <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
+        
+        <guid>http://192.168.5.1:1313/posts/google_analytics/</guid>
+        <description>DW Sun http://192.168.5.1:1313/posts/google_analytics/ -&lt;p&gt;Google Analytics&lt;/p&gt;
+- http://192.168.5.1:1313/posts/google_analytics/ - DW Sun 2020</description>
+        </item>
     
-    <item>
-      <title>Contact</title>
-      <link>https://dw-sun.github.io/contact/</link>
-      <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
-      
-      <guid>https://dw-sun.github.io/contact/</guid>
-      <description>The communication channels: email: sunduowei@hotmail.com
-Zoom: https://zoom.com.cn/j/9546263564
-Tencent/Wechat meeting: https://meeting.tencent.com/p/6806646001
-Cell: +86 139 1127 1168
-Website: https://dw-sun.github.io</description>
-    </item>
+    
+    
+        <item>
+        <title>Hugo and RobotsTxt</title>
+        <link>http://192.168.5.1:1313/posts/hugo_robots/</link>
+        <pubDate>Thu, 27 Aug 2020 10:24:44 +0800</pubDate>
+        
+        <guid>http://192.168.5.1:1313/posts/hugo_robots/</guid>
+        <description>DW Sun http://192.168.5.1:1313/posts/hugo_robots/ -&lt;h3 id=&#34;how-hugo-support-robotstxt&#34;&gt;How Hugo support RobotsTxt&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Config config.toml&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;enableRobotsTXT = true
+[params].env = &amp;quot;production&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run hugo command to generate the web site&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a robots.txt will be generated in &lt;em&gt;&lt;strong&gt;public&lt;/strong&gt;&lt;/em&gt; directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;robots.txt templates are existing in &lt;em&gt;&lt;strong&gt;layouts/robots.txt&lt;/strong&gt;&lt;/em&gt; file, or &lt;em&gt;&lt;strong&gt;themes/ananke/layouts/robots.txt&lt;/strong&gt;&lt;/em&gt; file&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the templates would affects the content of the generated  &lt;em&gt;&lt;strong&gt;public/robots.txt&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;robotstxt-samples&#34;&gt;RobotsTxt samples&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Which tells search engines that they are allowed to crawl everything:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;User-agent: *
+Disallow:
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Which tells search engines that they are &lt;strong&gt;NOT&lt;/strong&gt; allowed to crawl anything:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;User-agent: *
+Disallow: /
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+- http://192.168.5.1:1313/posts/hugo_robots/ - DW Sun 2020</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>About</title>
+        <link>http://192.168.5.1:1313/about/</link>
+        <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
+        
+        <guid>http://192.168.5.1:1313/about/</guid>
+        <description>DW Sun http://192.168.5.1:1313/about/ -&lt;p&gt;I am living at BeiJing, China; I am looking for the job opportunity now, it could be full time, or part time.&lt;/p&gt;
+&lt;p&gt;I am studying AI, Istio/Service Mesh/Micor Service, and some consulting skills.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+- http://192.168.5.1:1313/about/ - DW Sun 2020</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Contact</title>
+        <link>http://192.168.5.1:1313/contact/</link>
+        <pubDate>Tue, 25 Aug 2020 20:47:56 +0800</pubDate>
+        
+        <guid>http://192.168.5.1:1313/contact/</guid>
+        <description>DW Sun http://192.168.5.1:1313/contact/ -&lt;h2 id=&#34;the-communication-channels&#34;&gt;The communication channels:&lt;/h2&gt;
+&lt;p&gt;email: &lt;a href=&#34;mailto:sunduowei@hotmail.com&#34;&gt;sunduowei@hotmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Zoom: &lt;a href=&#34;https://zoom.com.cn/j/9546263564&#34;&gt;https://zoom.com.cn/j/9546263564&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tencent/Wechat meeting: &lt;a href=&#34;https://meeting.tencent.com/p/6806646001&#34;&gt;https://meeting.tencent.com/p/6806646001&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cell: +86 139 1127 1168&lt;/p&gt;
+&lt;p&gt;Website: &lt;a href=&#34;https://dw-sun.github.io&#34;&gt;https://dw-sun.github.io&lt;/a&gt;&lt;/p&gt;
+- http://192.168.5.1:1313/contact/ - DW Sun 2020</description>
+        </item>
+    
     
   </channel>
-</rss>
+</rss> 
