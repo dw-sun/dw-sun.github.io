@@ -6,9 +6,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
-    <lastBuildDate>Fri, 28 Aug 2020 08:31:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 21:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://dw-sun.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Google Analytics</title>
+        <link>https://dw-sun.github.io/post/google_analytics/</link>
+        <pubDate>Fri, 28 Aug 2020 21:00:00 +0800</pubDate>
+        
+        <guid>https://dw-sun.github.io/post/google_analytics/</guid>
+        <description>DW Sun https://dw-sun.github.io/post/google_analytics/ -&lt;h2 id=&#34;what-is-google-analytics&#34;&gt;What is Google Analytics&lt;/h2&gt;
+&lt;p&gt;It is used to help you understand how your web site are accessing. With it, you can learn which part of your web is good, or bad; you can know how many user was/are accessing your web, where are they from&amp;hellip;.; then you can improve the website accordingly.&lt;/p&gt;
+&lt;p&gt;It is also for Android app, and iOS app.&lt;/p&gt;
+&lt;h2 id=&#34;the-steps-to-use-it&#34;&gt;The steps to use it&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;login &lt;a href=&#34;https://marketingplatform.google.com/about/analytics/&#34;&gt;https://marketingplatform.google.com/about/analytics/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create Account - from Admin menu -&amp;gt; Account -&amp;gt; Create Account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create Property - from Admin menu -&amp;gt; Property -&amp;gt; Create Property&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The web site need to be verified by google before it can be analysis&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;access the web site&lt;/li&gt;
+&lt;li&gt;report -&amp;gt; real time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Study the reports to enhance your website&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+- https://dw-sun.github.io/post/google_analytics/ - DW Sun 2020</description>
+        </item>
     
     
     
@@ -54,45 +93,6 @@ Disallow: /
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 - https://dw-sun.github.io/post/hugo_robots/ - DW Sun 2020</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Google Analytics</title>
-        <link>https://dw-sun.github.io/post/google_analytics/</link>
-        <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
-        
-        <guid>https://dw-sun.github.io/post/google_analytics/</guid>
-        <description>DW Sun https://dw-sun.github.io/post/google_analytics/ -&lt;h2 id=&#34;what-is-google-analytics&#34;&gt;What is Google Analytics&lt;/h2&gt;
-&lt;p&gt;It is used to help you understand how your web site are accessing. With it, you can learn which part of your web is good, or bad; you can know how many user was/are accessing your web, where are they from&amp;hellip;.; then you can improve the website accordingly.&lt;/p&gt;
-&lt;p&gt;It is also for Android app, and iOS app.&lt;/p&gt;
-&lt;h2 id=&#34;the-steps-to-use-it&#34;&gt;The steps to use it&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;login &lt;a href=&#34;https://marketingplatform.google.com/about/analytics/&#34;&gt;https://marketingplatform.google.com/about/analytics/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create Account - from Admin menu -&amp;gt; Account -&amp;gt; Create Account&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create Property - from Admin menu -&amp;gt; Property -&amp;gt; Create Property&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;The web site need to be verified by google before it can be analysis&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Check&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;access the web site&lt;/li&gt;
-&lt;li&gt;report -&amp;gt; real time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Study the reports to enhance your website&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-- https://dw-sun.github.io/post/google_analytics/ - DW Sun 2020</description>
         </item>
     
     

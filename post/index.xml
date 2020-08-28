@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
-    <lastBuildDate>Fri, 28 Aug 2020 08:31:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://dw-sun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Google Analytics</title>
+      <link>https://dw-sun.github.io/post/google_analytics/</link>
+      <pubDate>Fri, 28 Aug 2020 21:00:00 +0800</pubDate>
+      
+      <guid>https://dw-sun.github.io/post/google_analytics/</guid>
+      <description>What is Google Analytics It is used to help you understand how your web site are accessing. With it, you can learn which part of your web is good, or bad; you can know how many user was/are accessing your web, where are they from&amp;hellip;.; then you can improve the website accordingly.
+It is also for Android app, and iOS app.
+The steps to use it   login https://marketingplatform.google.com/about/analytics/</description>
+    </item>
     
     <item>
       <title>Hugo and RobotsTxt</title>
@@ -22,17 +33,6 @@
 enableRobotsTXT = true# production or non-production, usually production env would allow search engine to crawl everything[params].env = &amp;quot;production&amp;quot;  run hugo command to generate the web site
  a robots.txt will be generated in public directory    robots.txt templates are existing in layouts/robots.txt file, or themes/ananke/layouts/robots.txt file
  the templates would affects the content of the generated public/robots.</description>
-    </item>
-    
-    <item>
-      <title>Google Analytics</title>
-      <link>https://dw-sun.github.io/post/google_analytics/</link>
-      <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
-      
-      <guid>https://dw-sun.github.io/post/google_analytics/</guid>
-      <description>What is Google Analytics It is used to help you understand how your web site are accessing. With it, you can learn which part of your web is good, or bad; you can know how many user was/are accessing your web, where are they from&amp;hellip;.; then you can improve the website accordingly.
-It is also for Android app, and iOS app.
-The steps to use it   login https://marketingplatform.google.com/about/analytics/</description>
     </item>
     
   </channel>
