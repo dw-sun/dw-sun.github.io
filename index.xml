@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading, Thinking, Experiencing, Making on DW Sun</title>
+    <title>DW Sun Home on DW Sun</title>
     <link>https://dw-sun.github.io/</link>
-    <description>Recent content in Reading, Thinking, Experiencing, Making on DW Sun</description>
+    <description>Recent content in DW Sun Home on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
@@ -64,7 +64,10 @@ Disallow: /
         <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
         
         <guid>https://dw-sun.github.io/post/google_analytics/</guid>
-        <description>DW Sun https://dw-sun.github.io/post/google_analytics/ -&lt;p&gt;Google Analytics&lt;/p&gt;
+        <description>DW Sun https://dw-sun.github.io/post/google_analytics/ -&lt;h2 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h2&gt;
+&lt;p&gt;It is used to help you understand how your web site are accessing. With it, you can learn which part of your web is good, or bad; you can know how many user was/are accessing your web, where are they from&amp;hellip;.; then you can improve the website accordingly.&lt;/p&gt;
+&lt;p&gt;It is also for Android app, and iOS app.&lt;/p&gt;
+&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
 - https://dw-sun.github.io/post/google_analytics/ - DW Sun 2020</description>
         </item>
     
