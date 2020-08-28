@@ -1,40 +1,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on DW Sun</title>
+    <title>Reading, Thinking, Experiencing, Making on DW Sun</title>
     <link>https://dw-sun.github.io/</link>
-    <description>Recent content in Home on DW Sun</description>
+    <description>Recent content in Reading, Thinking, Experiencing, Making on DW Sun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
-    <lastBuildDate>Thu, 27 Aug 2020 12:07:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 08:31:00 +0800</lastBuildDate>
     
         <atom:link href="https://dw-sun.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>Google Analytics</title>
-        <link>https://dw-sun.github.io/posts/google_analytics/</link>
-        <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
-        
-        <guid>https://dw-sun.github.io/posts/google_analytics/</guid>
-        <description>DW Sun https://dw-sun.github.io/posts/google_analytics/ -&lt;p&gt;Google Analytics&lt;/p&gt;
-- https://dw-sun.github.io/posts/google_analytics/ - DW Sun 2020</description>
-        </item>
-    
-    
-    
-        <item>
         <title>Hugo and RobotsTxt</title>
-        <link>https://dw-sun.github.io/posts/hugo_robots/</link>
-        <pubDate>Thu, 27 Aug 2020 10:24:44 +0800</pubDate>
+        <link>https://dw-sun.github.io/post/hugo_robots/</link>
+        <pubDate>Fri, 28 Aug 2020 08:31:00 +0800</pubDate>
         
-        <guid>https://dw-sun.github.io/posts/hugo_robots/</guid>
-        <description>DW Sun https://dw-sun.github.io/posts/hugo_robots/ -&lt;h3 id=&#34;how-hugo-support-robotstxt&#34;&gt;How Hugo support RobotsTxt&lt;/h3&gt;
+        <guid>https://dw-sun.github.io/post/hugo_robots/</guid>
+        <description>DW Sun https://dw-sun.github.io/post/hugo_robots/ -&lt;h3 id=&#34;how-hugo-support-robotstxt&#34;&gt;How Hugo support RobotsTxt&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Config config.toml&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;enableRobotsTXT = true
+
+# production or non-production, usually production env would allow search engine to crawl everything
 [params].env = &amp;quot;production&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;
@@ -63,7 +53,19 @@ Disallow:
 Disallow: /
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
-- https://dw-sun.github.io/posts/hugo_robots/ - DW Sun 2020</description>
+- https://dw-sun.github.io/post/hugo_robots/ - DW Sun 2020</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Google Analytics</title>
+        <link>https://dw-sun.github.io/post/google_analytics/</link>
+        <pubDate>Thu, 27 Aug 2020 12:07:52 +0800</pubDate>
+        
+        <guid>https://dw-sun.github.io/post/google_analytics/</guid>
+        <description>DW Sun https://dw-sun.github.io/post/google_analytics/ -&lt;p&gt;Google Analytics&lt;/p&gt;
+- https://dw-sun.github.io/post/google_analytics/ - DW Sun 2020</description>
         </item>
     
     
