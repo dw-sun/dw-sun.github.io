@@ -18,7 +18,7 @@
       <pubDate>Tue, 01 Sep 2020 08:31:00 +0800</pubDate>
       
       <guid>https://dw-sun.github.io/post/cuda_pytorch_vsc/</guid>
-      <description>My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key messages to configure a Nvidia GPU enabled development environment
+      <description>My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key steps to configure a Nvidia GPU enabled development environment
 1. Review latest online guide -&amp;gt; 2. Find out the GPU Model info -&amp;gt; 3. find out the latest GPU driver version -&amp;gt; 4. determine the CUDA Toolkit version -&amp;gt; 5. Review the selected version CUDA toolkit online guide -&amp;gt; 6.</description>
     </item>
     

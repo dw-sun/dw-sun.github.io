@@ -18,7 +18,7 @@
         <pubDate>Tue, 01 Sep 2020 08:31:00 +0800</pubDate>
         
         <guid>https://dw-sun.github.io/post/cuda_pytorch_vsc/</guid>
-        <description>DW Sun https://dw-sun.github.io/post/cuda_pytorch_vsc/ -&lt;p&gt;My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key messages to configure a Nvidia GPU enabled development environment&lt;/p&gt;
+        <description>DW Sun https://dw-sun.github.io/post/cuda_pytorch_vsc/ -&lt;p&gt;My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key steps to configure a Nvidia GPU enabled development environment&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;1. Review latest online guide&lt;/code&gt; -&amp;gt; &lt;code&gt;2. Find out the GPU Model info&lt;/code&gt; -&amp;gt; &lt;code&gt;3. find out the latest GPU driver version&lt;/code&gt; -&amp;gt; &lt;code&gt;4. determine the CUDA Toolkit version&lt;/code&gt; -&amp;gt; &lt;code&gt;5. Review the selected version CUDA toolkit online guide&lt;/code&gt; -&amp;gt; &lt;code&gt;6. Chose the VSC version and install&lt;/code&gt; -&amp;gt; &lt;code&gt;7. Install the CUDA tool kit&lt;/code&gt; -&amp;gt; &lt;code&gt;8. Chose the the PyTorch version and install&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;preparing&#34;&gt;Preparing&lt;/h2&gt;
 &lt;p&gt;Review the &lt;a href=&#34;https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html&#34;&gt;CUDA Installation Guide for Microsoft Windows&lt;/a&gt;, key points below:&lt;/p&gt;
@@ -27,34 +27,37 @@
 &lt;li&gt;A supported version of Microsoft Visual Studio&lt;/li&gt;
 &lt;li&gt;A workable NVIDIA CUDA Toolkit version for your GPU&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;gpu-check-and-driver-installation&#34;&gt;GPU check and driver installation&lt;/h2&gt;
+&lt;h2 id=&#34;check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version&#34;&gt;Check GPU model, find driver version, determine CUDA Toolkit, VSC version&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Check the GPU model - &lt;strong&gt;NVIDIA Quadro 1000M&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Find the GPU latest driver and install it
+&lt;li&gt;Find the GPU driver latest version
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.nvidia.com/Download/index.aspx?lang=en-us&#34;&gt;https://www.nvidia.com/Download/index.aspx?lang=en-us&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;According the driver version number, determine which CUDA Toolkit version is workable for my laptop
+&lt;li&gt;According the driver version number, determine which CUDA Toolkit version is workable for it
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components&#34;&gt;https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;My GPU &lt;strong&gt;driver highest version is 377.55&lt;/strong&gt;, so the hightest workable &lt;strong&gt;CUDA toolkit version is v8.0.61&lt;/strong&gt; with my laptop&lt;/li&gt;
+&lt;li&gt;My GPU &lt;strong&gt;driver highest version is 377.55&lt;/strong&gt;, so the hightest workable &lt;strong&gt;CUDA toolkit version is v8.0.61&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;According the CUDA Toolkit version, choose the VSC version
 &lt;ul&gt;
 &lt;li&gt;Change to CUDA Toolkit v8 online documents, review the installation guide&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/cuda/archive/8.0/&#34;&gt;https://docs.nvidia.com/cuda/archive/8.0/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html&#34;&gt;https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The CUDA Toolkit version is v8, then i choose &lt;strong&gt;Visual Studio Community 2015&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;vsc-install&#34;&gt;VSC Install&lt;/h2&gt;
+&lt;h2 id=&#34;install-gpu-driver&#34;&gt;Install GPU driver&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.nvidia.com/Download/driverResults.aspx/120734/en-us&#34;&gt;https://www.nvidia.com/Download/driverResults.aspx/120734/en-us&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-vsc&#34;&gt;Install VSC&lt;/h2&gt;
 &lt;p&gt;Install &lt;strong&gt;Visual Studio Community 2015&lt;/strong&gt;. Make sure to include all C++ features&lt;/p&gt;
-&lt;h2 id=&#34;cuda-install&#34;&gt;CUDA Install&lt;/h2&gt;
+&lt;h2 id=&#34;install-cuda-toolkit&#34;&gt;Install CUDA Toolkit&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/cuda-toolkit-archive&#34;&gt;https://developer.nvidia.com/cuda-toolkit-archive&lt;/a&gt;
+&lt;a href=&#34;https://developer.nvidia.com/cuda-80-ga2-download-archive&#34;&gt;https://developer.nvidia.com/cuda-80-ga2-download-archive&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Install &lt;strong&gt;CUDA toolkit v8.0.61&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;pytorch-installcuda-enabled&#34;&gt;PyTorch Install(CUDA enabled)&lt;/h2&gt;
+&lt;h2 id=&#34;install-pytorchcuda-enabled&#34;&gt;Install PyTorch(CUDA enabled)&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Review &lt;a href=&#34;https://pytorch.org/get-started/locally/&#34;&gt;get started&lt;/a&gt;
 &lt;ul&gt;

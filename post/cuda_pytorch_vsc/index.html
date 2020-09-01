@@ -10,7 +10,7 @@
 <meta name="google-site-verification" content="">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="This blog lists the key configuration points to install CUDA, PyTorch, and VSC">
+<meta name="description" content="This blog lists the key configuration steps to install CUDA, PyTorch, and VSC">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
@@ -247,7 +247,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     CUDA, PyTorch and VSC Installation on Windows 10
                     
                     <div class="post-subtitle">
-                        This blog lists the key configuration points to install CUDA, PyTorch, and VSC
+                        This blog lists the key configuration steps to install CUDA, PyTorch, and VSC
                     </div>
                     
                     <div class="post-meta">
@@ -286,7 +286,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                             
                             1 min
                             
-                            24 s.
+                            25 s.
                         
                     </div>
                 </div>
@@ -296,7 +296,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                 <div class="post-body" v-pre>
                 
-                    <p>My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key messages to configure a Nvidia GPU enabled development environment</p>
+                    <p>My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key steps to configure a Nvidia GPU enabled development environment</p>
 <p><code>1. Review latest online guide</code> -&gt; <code>2. Find out the GPU Model info</code> -&gt; <code>3. find out the latest GPU driver version</code> -&gt; <code>4. determine the CUDA Toolkit version</code> -&gt; <code>5. Review the selected version CUDA toolkit online guide</code> -&gt; <code>6. Chose the VSC version and install</code> -&gt; <code>7. Install the CUDA tool kit</code> -&gt; <code>8. Chose the the PyTorch version and install</code></p>
 <h2 id="preparing">Preparing</h2>
 <p>Review the <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html">CUDA Installation Guide for Microsoft Windows</a>, key points below:</p>
@@ -305,34 +305,37 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <li>A supported version of Microsoft Visual Studio</li>
 <li>A workable NVIDIA CUDA Toolkit version for your GPU</li>
 </ol>
-<h2 id="gpu-check-and-driver-installation">GPU check and driver installation</h2>
+<h2 id="check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version">Check GPU model, find driver version, determine CUDA Toolkit, VSC version</h2>
 <ol>
 <li>Check the GPU model - <strong>NVIDIA Quadro 1000M</strong></li>
-<li>Find the GPU latest driver and install it
+<li>Find the GPU driver latest version
 <ul>
 <li><a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></li>
 </ul>
 </li>
-<li>According the driver version number, determine which CUDA Toolkit version is workable for my laptop
+<li>According the driver version number, determine which CUDA Toolkit version is workable for it
 <ul>
 <li><a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components">https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components</a></li>
-<li>My GPU <strong>driver highest version is 377.55</strong>, so the hightest workable <strong>CUDA toolkit version is v8.0.61</strong> with my laptop</li>
+<li>My GPU <strong>driver highest version is 377.55</strong>, so the hightest workable <strong>CUDA toolkit version is v8.0.61</strong></li>
 </ul>
 </li>
 <li>According the CUDA Toolkit version, choose the VSC version
 <ul>
 <li>Change to CUDA Toolkit v8 online documents, review the installation guide</li>
-<li><a href="https://docs.nvidia.com/cuda/archive/8.0/">https://docs.nvidia.com/cuda/archive/8.0/</a></li>
 <li><a href="https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html">https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html</a></li>
 <li>The CUDA Toolkit version is v8, then i choose <strong>Visual Studio Community 2015</strong></li>
 </ul>
 </li>
 </ol>
-<h2 id="vsc-install">VSC Install</h2>
+<h2 id="install-gpu-driver">Install GPU driver</h2>
+<p><a href="https://www.nvidia.com/Download/driverResults.aspx/120734/en-us">https://www.nvidia.com/Download/driverResults.aspx/120734/en-us</a></p>
+<h2 id="install-vsc">Install VSC</h2>
 <p>Install <strong>Visual Studio Community 2015</strong>. Make sure to include all C++ features</p>
-<h2 id="cuda-install">CUDA Install</h2>
+<h2 id="install-cuda-toolkit">Install CUDA Toolkit</h2>
+<p><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a>
+<a href="https://developer.nvidia.com/cuda-80-ga2-download-archive">https://developer.nvidia.com/cuda-80-ga2-download-archive</a></p>
 <p>Install <strong>CUDA toolkit v8.0.61</strong></p>
-<h2 id="pytorch-installcuda-enabled">PyTorch Install(CUDA enabled)</h2>
+<h2 id="install-pytorchcuda-enabled">Install PyTorch(CUDA enabled)</h2>
 <ol>
 <li>Review <a href="https://pytorch.org/get-started/locally/">get started</a>
 <ul>
