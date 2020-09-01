@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>DW Sun 2020</copyright>
-    <lastBuildDate>Fri, 28 Aug 2020 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 08:31:00 +0800</lastBuildDate>
     
 	<atom:link href="https://dw-sun.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI</title>
+      <link>https://dw-sun.github.io/tags/ai/</link>
+      <pubDate>Tue, 01 Sep 2020 08:31:00 +0800</pubDate>
+      
+      <guid>https://dw-sun.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GPU</title>
+      <link>https://dw-sun.github.io/tags/gpu/</link>
+      <pubDate>Tue, 01 Sep 2020 08:31:00 +0800</pubDate>
+      
+      <guid>https://dw-sun.github.io/tags/gpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
+      <link>https://dw-sun.github.io/tags/tech/</link>
+      <pubDate>Tue, 01 Sep 2020 08:31:00 +0800</pubDate>
+      
+      <guid>https://dw-sun.github.io/tags/tech/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>google</title>
@@ -18,15 +45,6 @@
       <pubDate>Fri, 28 Aug 2020 21:00:00 +0800</pubDate>
       
       <guid>https://dw-sun.github.io/tags/google/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tech</title>
-      <link>https://dw-sun.github.io/tags/tech/</link>
-      <pubDate>Fri, 28 Aug 2020 21:00:00 +0800</pubDate>
-      
-      <guid>https://dw-sun.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
