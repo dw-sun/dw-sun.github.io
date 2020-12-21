@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>CUDA, PyTorch and VSC Installation on Windows 10 - DW Sun's Blog</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">DW Sun's Blog</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2020</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">CUDA, PyTorch and VSC Installation on Windows 10</a>
+</li>
+            
+<li>
+    <a href="../google_analytics/" class="dropdown-item">How to use Google Analytics</a>
+</li>
+            
+<li>
+    <a href="../hugo_robots/" class="dropdown-item">How Hugo support RobotsTxt</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../google_analytics/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#cuda-pytorch-and-vsc-installation-on-windows-10" class="nav-link">CUDA, PyTorch and VSC Installation on Windows 10</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#preparing" class="nav-link">Preparing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version" class="nav-link">Check GPU model, find driver version, determine CUDA Toolkit, VSC version</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-gpu-driver" class="nav-link">Install GPU driver</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-vsc" class="nav-link">Install VSC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-cuda-toolkit" class="nav-link">Install CUDA Toolkit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-pytorchcuda-enabled" class="nav-link">Install PyTorch(CUDA enabled)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#next" class="nav-link">Next</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="cuda-pytorch-and-vsc-installation-on-windows-10">CUDA, PyTorch and VSC Installation on Windows 10</h1>
+<p><strong>last update: 2020-09-01</strong><br />
+<strong>created: 2020-09-01</strong></p>
+<p>My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key steps to configure a Nvidia GPU enabled development environment</p>
+<p><code>1. Review latest online guide</code> -&gt; <code>2. Find out the GPU Model info</code> -&gt; <code>3. find out the latest GPU driver version</code> -&gt; <code>4. determine the CUDA Toolkit version</code> -&gt; <code>5. Review the selected version CUDA toolkit online guide</code> -&gt; <code>6. Chose the VSC version and install</code> -&gt; <code>7. Install the CUDA tool kit</code> -&gt; <code>8. Chose the the PyTorch version and install</code></p>
+<h2 id="preparing">Preparing</h2>
+<p>Review the <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html">CUDA Installation Guide for Microsoft Windows</a>, key points below:</p>
+<ol>
+<li>A CUDA-capable GPU</li>
+<li>A supported version of Microsoft Visual Studio</li>
+<li>A workable NVIDIA CUDA Toolkit version for your GPU</li>
+</ol>
+<h2 id="check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version">Check GPU model, find driver version, determine CUDA Toolkit, VSC version</h2>
+<ol>
+<li>Check the GPU model - <strong>NVIDIA Quadro 1000M</strong></li>
+<li>Find the GPU driver latest version<ul>
+<li><a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></li>
+</ul>
+</li>
+<li>According the driver version number, determine which CUDA Toolkit version is workable for it<ul>
+<li><a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components">https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components</a></li>
+<li>My GPU <strong>driver highest version is 377.55</strong>, so the hightest workable <strong>CUDA toolkit version is v8.0.61</strong></li>
+</ul>
+</li>
+<li>According the CUDA Toolkit version, choose the VSC version<ul>
+<li>Change to CUDA Toolkit v8 online documents, review the installation guide</li>
+<li><a href="https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html">https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html</a></li>
+<li>The CUDA Toolkit version is v8, then i choose <strong>Visual Studio Community 2015</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="install-gpu-driver">Install GPU driver</h2>
+<p><a href="https://www.nvidia.com/Download/driverResults.aspx/120734/en-us">https://www.nvidia.com/Download/driverResults.aspx/120734/en-us</a></p>
+<h2 id="install-vsc">Install VSC</h2>
+<p>Install <strong>Visual Studio Community 2015</strong>. Make sure to include all C++ features</p>
+<h2 id="install-cuda-toolkit">Install CUDA Toolkit</h2>
+<p><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a><br />
+<a href="https://developer.nvidia.com/cuda-80-ga2-download-archive">https://developer.nvidia.com/cuda-80-ga2-download-archive</a></p>
+<p>Install <strong>CUDA toolkit v8.0.61</strong></p>
+<h2 id="install-pytorchcuda-enabled">Install PyTorch(CUDA enabled)</h2>
+<ol>
+<li>Review <a href="https://pytorch.org/get-started/locally/">get started</a><ul>
+<li>Find the highest PyTroch version which is available for CUDA toolkit v8. The version is v1.0.0</li>
+</ul>
+</li>
+<li>Download the pip whl packages:<ul>
+<li><a href="https://download.pytorch.org/whl/cu80/torch-1.0.0-cp37-cp37m-win_amd64.whl">https://download.pytorch.org/whl/cu80/torch-1.0.0-cp37-cp37m-win_amd64.whl</a></li>
+</ul>
+</li>
+<li>
+<p>Create venv, and install pytorch</p>
+<div class="highlight"><pre><span></span><code>python -m venv cuda80
+<span class="nb">source</span> cuda80/scripts/activate
+pip install torch-1.0.0-cp37-cp37m-win_amd64.whl
+pip install <span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.2.1
+
+<span class="c1"># this package is needed by pytorch</span>
+pip install numpy
+</code></pre></div>
+</li>
+<li>
+<p>Verify the installation</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">torch</span><span class="o">.</span><span class="n">__version__</span> <span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="p">)</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="next">Next</h2>
+<p>We can use the <strong>Nvidia CUDA Container</strong> to save time</p>
+<p><div class="highlight"><pre><span></span><code>docker pull nvidia/cuda:8.0-devel-ubuntu14.04
+</code></pre></div>
+1. <a href="https://hub.docker.com/r/nvidia/cuda">https://hub.docker.com/r/nvidia/cuda</a><br />
+2. <a href="https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md">https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2020 DW Sun</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
