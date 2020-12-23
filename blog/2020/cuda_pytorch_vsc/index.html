@@ -1,0 +1,674 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Reading, Thinking, Experiencing, Making of DW Sun's">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>CUDA, PyTorch and VSC Installation on Windows 10 - DW Sun's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-176586104-2","dw-sun.github.io"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cuda-pytorch-and-vsc-installation-on-windows-10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="DW Sun&#39;s Blog" class="md-header-nav__button md-logo" aria-label="DW Sun's Blog">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            DW Sun's Blog
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              CUDA, PyTorch and VSC Installation on Windows 10
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DW Sun&#39;s Blog" class="md-nav__button md-logo" aria-label="DW Sun's Blog">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    DW Sun's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Reading
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Reading" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Reading
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../reading/2020/202012/" class="md-nav__link">
+      202012
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../reading/2020/202008/" class="md-nav__link">
+      202008
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Blog
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Blog" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1">
+      2020
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2020" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        2020
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CUDA, PyTorch and VSC Installation on Windows 10
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      CUDA, PyTorch and VSC Installation on Windows 10
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing" class="md-nav__link">
+    Preparing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version" class="md-nav__link">
+    Check GPU model, find driver version, determine CUDA Toolkit, VSC version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-gpu-driver" class="md-nav__link">
+    Install GPU driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-vsc" class="md-nav__link">
+    Install VSC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-cuda-toolkit" class="md-nav__link">
+    Install CUDA Toolkit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-pytorchcuda-enabled" class="md-nav__link">
+    Install PyTorch(CUDA enabled)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    Next
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../google_analytics/" class="md-nav__link">
+      How to use Google Analytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../hugo_robots/" class="md-nav__link">
+      How Hugo support RobotsTxt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing" class="md-nav__link">
+    Preparing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version" class="md-nav__link">
+    Check GPU model, find driver version, determine CUDA Toolkit, VSC version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-gpu-driver" class="md-nav__link">
+    Install GPU driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-vsc" class="md-nav__link">
+    Install VSC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-cuda-toolkit" class="md-nav__link">
+    Install CUDA Toolkit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-pytorchcuda-enabled" class="md-nav__link">
+    Install PyTorch(CUDA enabled)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    Next
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="cuda-pytorch-and-vsc-installation-on-windows-10">CUDA, PyTorch and VSC Installation on Windows 10<a class="headerlink" href="#cuda-pytorch-and-vsc-installation-on-windows-10" title="Permanent link">&para;</a></h1>
+<p><strong>last update: 2020-09-01</strong><br />
+<strong>created: 2020-09-01</strong></p>
+<p>My old laptop(Thinkpad W520) has a GPU, i want to use it to learn some AI technologies, this notes lists the key steps to configure a Nvidia GPU enabled development environment</p>
+<p><code>1. Review latest online guide</code> -&gt; <code>2. Find out the GPU Model info</code> -&gt; <code>3. find out the latest GPU driver version</code> -&gt; <code>4. determine the CUDA Toolkit version</code> -&gt; <code>5. Review the selected version CUDA toolkit online guide</code> -&gt; <code>6. Chose the VSC version and install</code> -&gt; <code>7. Install the CUDA tool kit</code> -&gt; <code>8. Chose the the PyTorch version and install</code></p>
+<h2 id="preparing">Preparing<a class="headerlink" href="#preparing" title="Permanent link">&para;</a></h2>
+<p>Review the <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html">CUDA Installation Guide for Microsoft Windows</a>, key points below:</p>
+<ol>
+<li>A CUDA-capable GPU</li>
+<li>A supported version of Microsoft Visual Studio</li>
+<li>A workable NVIDIA CUDA Toolkit version for your GPU</li>
+</ol>
+<h2 id="check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version">Check GPU model, find driver version, determine CUDA Toolkit, VSC version<a class="headerlink" href="#check-gpu-model-find-driver-version-determine-cuda-toolkit-vsc-version" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Check the GPU model - <strong>NVIDIA Quadro 1000M</strong></li>
+<li>Find the GPU driver latest version<ul>
+<li><a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></li>
+</ul>
+</li>
+<li>According the driver version number, determine which CUDA Toolkit version is workable for it<ul>
+<li><a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components">https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components</a></li>
+<li>My GPU <strong>driver highest version is 377.55</strong>, so the hightest workable <strong>CUDA toolkit version is v8.0.61</strong></li>
+</ul>
+</li>
+<li>According the CUDA Toolkit version, choose the VSC version<ul>
+<li>Change to CUDA Toolkit v8 online documents, review the installation guide</li>
+<li><a href="https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html">https://docs.nvidia.com/cuda/archive/8.0/cuda-installation-guide-microsoft-windows/index.html</a></li>
+<li>The CUDA Toolkit version is v8, then i choose <strong>Visual Studio Community 2015</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="install-gpu-driver">Install GPU driver<a class="headerlink" href="#install-gpu-driver" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.nvidia.com/Download/driverResults.aspx/120734/en-us">https://www.nvidia.com/Download/driverResults.aspx/120734/en-us</a></p>
+<h2 id="install-vsc">Install VSC<a class="headerlink" href="#install-vsc" title="Permanent link">&para;</a></h2>
+<p>Install <strong>Visual Studio Community 2015</strong>. Make sure to include all C++ features</p>
+<h2 id="install-cuda-toolkit">Install CUDA Toolkit<a class="headerlink" href="#install-cuda-toolkit" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a><br />
+<a href="https://developer.nvidia.com/cuda-80-ga2-download-archive">https://developer.nvidia.com/cuda-80-ga2-download-archive</a></p>
+<p>Install <strong>CUDA toolkit v8.0.61</strong></p>
+<h2 id="install-pytorchcuda-enabled">Install PyTorch(CUDA enabled)<a class="headerlink" href="#install-pytorchcuda-enabled" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Review <a href="https://pytorch.org/get-started/locally/">get started</a><ul>
+<li>Find the highest PyTroch version which is available for CUDA toolkit v8. The version is v1.0.0</li>
+</ul>
+</li>
+<li>Download the pip whl packages:<ul>
+<li><a href="https://download.pytorch.org/whl/cu80/torch-1.0.0-cp37-cp37m-win_amd64.whl">https://download.pytorch.org/whl/cu80/torch-1.0.0-cp37-cp37m-win_amd64.whl</a></li>
+</ul>
+</li>
+<li>
+<p>Create venv, and install pytorch</p>
+<div class="highlight"><pre><span></span><code>python -m venv cuda80
+<span class="nb">source</span> cuda80/scripts/activate
+pip install torch-1.0.0-cp37-cp37m-win_amd64.whl
+pip install <span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.2.1
+
+<span class="c1"># this package is needed by pytorch</span>
+pip install numpy
+</code></pre></div>
+</li>
+<li>
+<p>Verify the installation</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">torch</span><span class="o">.</span><span class="n">__version__</span> <span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="p">)</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p>We can use the <strong>Nvidia CUDA Container</strong> to save time</p>
+<p><div class="highlight"><pre><span></span><code>docker pull nvidia/cuda:8.0-devel-ubuntu14.04
+</code></pre></div>
+1. <a href="https://hub.docker.com/r/nvidia/cuda">https://hub.docker.com/r/nvidia/cuda</a><br />
+2. <a href="https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md">https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../../reading/2020/202008/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                202008
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../google_analytics/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                How to use Google Analytics
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 DW Sun
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
